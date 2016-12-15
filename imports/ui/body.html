@@ -1,0 +1,67 @@
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <title>ToDo List</title>
+</head>
+<body>
+
+  <header>
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a class="brand-logo"><img src="img/logo.png"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="http://www.wissamghozlan.de/">About Me</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="http://www.wissamghozlan.de/">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+ 
+<div class="container">
+
+
+      {{#if currentUser}}
+      <h1>Welcome {{currentUser.username}}</h1>
+      {{> dashboard}}
+     <!--<h3>You Still Have ({{incompleteCount}}) Tasks ToDo!</h3>-->
+
+
+      <div class="right switch">
+        <label class="hide-completed">
+          <input type="checkbox">
+          <span class="lever"></span>
+          Hide Completed Tasks
+        </label>
+      </div>
+
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Type to add new tasks" />
+      </form>
+
+      
+
+      {{else}}
+
+      {{> login}}
+      {{> register}}
+
+      {{/if}} 
+
+    
+    <ul>
+      {{#each tasks}}
+      {{> task}}
+      {{/each}}
+    </ul>
+</div>
+
+</body>
+

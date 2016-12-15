@@ -1,0 +1,40 @@
+  body {
+  	font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+
+.brand-logo img {
+	width: 60px;
+	height: 60px;
+}  
+
+.nav-extended {
+	background-color: #7ee95e!important;
+}
+
+.btn {
+	background-color: #7ee95e!important;
+}
+
+.btn:hover {
+	background-color: #42bc1c!important;
+}
+
+
+    .input-field input[type=date]:focus + label,
+    .input-field input[type=text]:focus + label,
+    .input-field input[type=email]:focus + label,
+    .input-field input[type=password]:focus + label {
+      color: #7ee95e!important;
+    }
+
+    .input-field input[type=date]:focus,
+    .input-field input[type=text]:focus,
+    .input-field input[type=email]:focus,
+    .input-field input[type=password]:focus {
+      border-bottom: 2px solid #7ee95e!important;
+      box-shadow: none;
+    }
+.input-field .prefix ~ input {
+	width: 300px!important;
+}

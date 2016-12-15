@@ -1,0 +1,48 @@
+<head>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<title>ToDo List</title>
+</head>
+
+<template name="task">
+	<ul class="collection {{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+
+		{{#if isOwner}}
+
+		<button class="waves-effect waves-teal btn-flat toggle-private">
+
+			{{#if private}}
+
+			Private
+
+			{{else}}
+
+			Public
+
+			{{/if}}
+
+		</button>
+
+		<button class="right btn waves-effect waves-light red delete">Delete</button>
+
+		<div class="right switch">
+			<label>
+			not Done
+				<input type="checkbox" checked="{{checked}}" class="right toggle-checked">
+				<span class="lever"></span>
+		    Done!
+			</label>
+		</div>
+
+         <br>
+		<span class="text"><strong>{{username}}</strong> - {{text}}</span>      
+	{{/if}}
+
+	</ul>
+
+</template>
+

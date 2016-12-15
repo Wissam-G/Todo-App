@@ -1,0 +1,58 @@
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <title>ToDo List</title>
+</head>
+<body>
+
+</body>
+
+<template name="dashboard">
+    <button class="right btn waves-effect waves-light logout" type="submit" name="action">Logout</button>
+</template>
+
+<template name="register">
+  <div class="row">
+    <form class="col s12 center-align">
+      <div class="row">
+        <div class="input-field col s12">
+        <input  type="text" name="registerUsername">
+        <label for="username" data-error="wrong" data-success="right">Name</label>
+      </div>
+       <div class="input-field col s12">
+        <input  type="email" name="registerEmail">
+        <label for="registerEmail" data-error="wrong" data-success="right">Email</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="password" name="registerPassword">
+        <label for="registerPassword" data-error="wrong" data-success="right">Password</label>
+      </div>
+      <input class="btn waves-effect waves-light" type="submit" value="Register">
+    </div>
+  </form>
+</div>
+</template>
+
+<template name="login">
+  <div class="row">
+    <form class="col s12 center-align">
+      <div class="row">
+       <div class="input-field col s12">
+        <input  type="email" name="loginEmail">
+        <label for="loginEmail" data-error="wrong" data-success="right">Email</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="password" name="loginPassword">
+        <label for="loginPassword" data-error="wrong" data-success="right">Password</label>
+      </div>
+      <input class="btn waves-effect waves-light" type="submit" value="Login">
+    </div>
+
+  </form>
+ </div>
+</template>
